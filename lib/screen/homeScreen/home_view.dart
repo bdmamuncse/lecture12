@@ -16,6 +16,11 @@ class HomeView extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Obx(() => Text('${_controller.userDataList.length}')),
+        actions: [
+          IconButton(onPressed: (){
+            _controller.callBottomSheet();
+          }, icon: Icon(Icons.add) ),
+        ],
       ),
       drawer: const Drawer(),
       body: Container(
